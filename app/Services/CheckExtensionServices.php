@@ -8,6 +8,7 @@ class CheckExtensionServices
     public static function checkExtension($fileData, $extension){
 
         $extension = mb_strtolower($extension);
+        $data_url = CheckExtensionServices::checkExtension($fileData, $extension);
 
         if ($extension === 'jpg'){
             $data_url = 'data:image/jpg;base64,'. base64_encode($fileData);
